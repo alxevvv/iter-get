@@ -1,0 +1,19 @@
+# dependencies
+/node_modules
+
+# testing
+/coverage
+
+# misc
+.DS_Store
+
+.npmrc
+package-lock.json
+npm-debug.log*
+
+.yarnrc
+yarn-debug.log*
+yarn-error.log*
+yarn.lock
+
+.yo-rc.json

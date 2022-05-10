@@ -1,0 +1,37 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": false
+    }
+  },
+  "env": {
+    "es6": true,
+    "jest": true,
+    "browser": false,
+    "node": true
+  },
+  "extends": [
+    "plugin:prettier/recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "rules": {
+    "@typescript-eslint/explicit-function-return-type": "warn",
+    "@typescript-eslint/no-empty-function": "warn",
+    "@typescript-eslint/no-unused-vars": "off",
+    "linebreak-style": [
+      "error",
+      "unix"
+    ],
+    "no-console": "warn",
+    "no-empty": "warn",
+    "no-unused-vars": "off",
+    "prefer-const": "warn",
+    "prettier/prettier": "warn",
+    "quotes": [
+      "warn",
+      "single"
+    ]
+  }
+}
