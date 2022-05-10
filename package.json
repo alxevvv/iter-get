@@ -1,7 +1,12 @@
 {
   "name": "iter-get",
-  "description": "Returns the first iterator value that matches the condition.",
   "version": "0.1.0",
+  "description": "Returns the first iterator value that matches the condition.",
+  "keywords": [
+    "iterator",
+    "collection",
+    "find"
+  ],
   "license": "MIT",
   "author": "alxevvv <alxevvv@gmail.com>",
   "main": "./dist/index.js",
