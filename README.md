@@ -4,6 +4,18 @@ Returns the first iterator value that matches the condition.
 
 ---
 
+## Installation
+
+```
+npm i iter-get
+```
+
+or
+
+```
+yarn add iter-get
+```
+
 ## Usage
 
 ```javascript
