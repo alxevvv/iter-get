@@ -1,6 +1,6 @@
 {
   "name": "iter-get",
-  "description": "Get iterator value by condition",
+  "description": "Returns the first iterator value that matches the condition.",
   "version": "0.1.0",
   "license": "MIT",
   "author": "alxevvv <alxevvv@gmail.com>",

@@ -70,3 +70,66 @@ describe('iter-get test suite', () => {
     expect(iterGet<unknown>(iFalsy, { find: (value) => value === 0, dflt: null })).toBe(0);
   });
 });
+
+describe('iter-get "readme" suite', () => {
+  it('default behaviour (usage without options)', () => {
+    const source = {
+      findHere: undefined,
+      findThere: undefined,
+      foundIt: 'gotcha!',
+      unreachable: 'in da house',
+    };
+
+    function* gen(): IterableIterator<string | undefined> {
+      yield source.findHere;
+      yield source.findThere;
+      yield source.foundIt;
+      yield source.unreachable;
+    }
+
+    const iterator = gen();
+
+    expect(iterGet(iterator)).toBe('gotcha!');
+  });
+
+  it('option `dflt`', () => {
+    function* gen(): IterableIterator<unknown> {
+      yield;
+      yield;
+      yield;
+    }
+
+    const iterator = gen();
+
+    expect(iterGet(iterator, { dflt: 'default' })).toBe('default');
+  });
+
+  it('option `skip`', () => {
+    function* gen(): IterableIterator<unknown> {
+      yield '';
+      yield 0;
+      yield null;
+      yield 'result';
+      yield 'the second';
+    }
+
+    const iterator1 = gen();
+    const iterator2 = gen();
+
+    expect(iterGet(iterator1)).toBe('');
+    expect(iterGet(iterator2, { skip: (value) => !value })).toBe('result');
+  });
+
+  it('options `find`', () => {
+    function* gen(): IterableIterator<{ id: number; x: number }> {
+      yield { id: 1, x: 0 };
+      yield { id: 2, x: 3 };
+      yield { id: 3, x: 7 };
+      yield { id: 4, x: 2 };
+    }
+
+    const iterator = gen();
+
+    expect(iterGet(iterator, { find: (value) => value.x > 5 })).toEqual({ id: 3, x: 7 });
+  });
+});
