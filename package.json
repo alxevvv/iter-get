@@ -3,9 +3,10 @@
   "version": "0.1.0",
   "description": "Returns the first iterator value that matches the condition.",
   "keywords": [
-    "iterator",
     "collection",
-    "find"
+    "find",
+    "iterator",
+    "utility"
   ],
   "license": "MIT",
   "author": "alxevvv <alxevvv@gmail.com>",
