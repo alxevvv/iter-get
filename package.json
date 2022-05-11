@@ -8,8 +8,16 @@
     "iterator",
     "utility"
   ],
+  "homepage": "https://github.com/alxevvv/iter-get",
+  "bugs": {
+    "url": "https://github.com/alxevvv/iter-get/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alxevvv/iter-get.git"
+  },
   "license": "MIT",
-  "author": "alxevvv <alxevvv@gmail.com>",
+  "author": "Vladislav Alexeev <alxevvv@gmail.com>",
   "main": "./dist/index.js",
   "source": "./src/index.ts",
   "types": "./dist/types/index.d.ts",
