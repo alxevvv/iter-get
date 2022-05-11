@@ -2,8 +2,6 @@
 
 Returns the first iterator value that matches the condition.
 
----
-
 ## Installation
 
 ```
