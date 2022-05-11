@@ -19,10 +19,12 @@ yarn add iter-get
 ## Usage
 
 ```javascript
+import { iterGet } from 'iter-get';
+
 iterGet(iterator, options?);
 ```
 
-Returns the first _defined_ value received from the iterator by default:
+By default it returns the first _defined_ value received from the iterator:
 
 ```javascript
 const source = {
@@ -68,7 +70,7 @@ iterGet(iterator, { dflt: 'default' }); // 'default'
 
 > default: `(value) => value === undefined`
 
-A callback that determines whether the given value should be skipped:
+A callback that determines whether the current iterator value should be skipped:
 
 ```javascript
 function* gen() {
